@@ -5,53 +5,50 @@ import java.util.Scanner;
 
 public class Solution {
 
-    /*
-     * Complete the plusMinus function below.
-     */
-    static void plusMinus(int[] arr) {
-        BigDecimal decimal;
-    	float n = arr.length;
-    	float negatives = 0;
-    	float positives = 0;
-    	float zeros = 0;
-    	for(int i = 0; i < arr.length; i++) {
-    		if(arr[i]> 0) {
-    			positives++;
-    		}
-    		if(arr[i]< 0) {
-    			negatives++;
-    		}
-    		if(arr[i] == 0) {
-    			zeros++;
-    		}
-    	}
-    	System.out.println(positives);
-    	System.out.println(negatives);
-    	System.out.println(zeros);
-    	
-    	decimal = new BigDecimal(positives/n).setScale(6);
-    	System.out.println(decimal);
-    	decimal = new BigDecimal(negatives/n);
-    	System.out.println(decimal);
-    	decimal = new BigDecimal(zeros/n);
-    	System.out.println(decimal);
-    	
-    }
+	/*
+	 * Complete the plusMinus function below.
+	 */
+	static void plusMinus(int[] arr) {
+		BigDecimal decimal;
+		float n = arr.length;
+		float negatives = 0;
+		float positives = 0;
+		float zeros = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i] > 0) {
+				positives++;
+			}
+			if (arr[i] < 0) {
+				negatives++;
+			}
+			if (arr[i] == 0) {
+				zeros++;
+			}
+		}
 
-    private static final Scanner scan = new Scanner(System.in);
+		decimal = new BigDecimal(positives / n).setScale(6, BigDecimal.ROUND_HALF_UP);
+		System.out.println(decimal);
+		decimal = new BigDecimal(negatives / n).setScale(6, BigDecimal.ROUND_HALF_UP);
+		System.out.println(decimal);
+		decimal = new BigDecimal(zeros / n).setScale(6, BigDecimal.ROUND_HALF_UP);
+		System.out.println(decimal);
 
-    public static void main(String[] args) {
-        int n = Integer.parseInt(scan.nextLine().trim());
+	}
 
-        int[] arr = new int[n];
+	private static final Scanner scan = new Scanner(System.in);
 
-        String[] arrItems = scan.nextLine().split(" ");
+	public static void main(String[] args) {
+		int n = Integer.parseInt(scan.nextLine().trim());
 
-        for (int arrItr = 0; arrItr < n; arrItr++) {
-            int arrItem = Integer.parseInt(arrItems[arrItr].trim());
-            arr[arrItr] = arrItem;
-        }
+		int[] arr = new int[n];
 
-        plusMinus(arr);
-    }
+		String[] arrItems = scan.nextLine().split(" ");
+
+		for (int arrItr = 0; arrItr < n; arrItr++) {
+			int arrItem = Integer.parseInt(arrItems[arrItr].trim());
+			arr[arrItr] = arrItem;
+		}
+
+		plusMinus(arr);
+	}
 }
