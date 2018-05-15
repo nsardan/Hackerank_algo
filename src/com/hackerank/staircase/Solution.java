@@ -4,21 +4,12 @@ import java.util.Scanner;
 
 public class Solution {
 
-	/*
-	 * Complete the staircase function below.
-	 */
+	
 	static void staircase(int n) {
-		/*
-		 * Write your code here.
-		 */
-		int c = n-1;
-		for (int j = 0; j < n; j++) {
-			if( j < c)
-			{
-				System.out.print("");
-			}
-			for (int i = j; i < n; i++) {
-				System.out.println("#");
+		for (int i = 0; i < n; i++) {
+             System.out.print("");
+			for (int j = 0; j < n && j == n -i -1; j++) {
+				System.out.print("#");
 			}
 		}
 	}
