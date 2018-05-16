@@ -7,46 +7,46 @@ import java.util.Scanner;
 
 public class Solution {
 
-    /*
-     * Complete the diagonalDifference function below.
-     */
-    static int diagonalDifference(int[][] a) {
-        /*
-         * Write your code here.
-         */
-    	int left = 0;
-    	int right = 0;
-    	for(int i = 0; i< a.length; i++) {
-    		left = left + a[i][i];
-    		right = right + a[i][a.length - 1- i];
-    	}
-    	
-    	return Math.abs(left - right);
-    }
+	/*
+	 * Complete the diagonalDifference function below.
+	 */
+	static int diagonalDifference(int[][] a) {
+		/*
+		 * Write your code here.
+		 */
+		int left = 0;
+		int right = 0;
+		for (int i = 0; i < a.length; i++) {
+			left = left + a[i][i];
+			right = right + a[i][a.length - 1 - i];
+		}
 
-    private static final Scanner scan = new Scanner(System.in);
+		return Math.abs(left - right);
+	}
 
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+	private static final Scanner scan = new Scanner(System.in);
 
-        int n = Integer.parseInt(scan.nextLine().trim());
+	public static void main(String[] args) throws IOException {
+		BufferedWriter bw = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int[][] a = new int[n][n];
+		int n = Integer.parseInt(scan.nextLine().trim());
 
-        for (int aRowItr = 0; aRowItr < n; aRowItr++) {
-            String[] aRowItems = scan.nextLine().split(" ");
+		int[][] a = new int[n][n];
 
-            for (int aColumnItr = 0; aColumnItr < n; aColumnItr++) {
-                int aItem = Integer.parseInt(aRowItems[aColumnItr].trim());
-                a[aRowItr][aColumnItr] = aItem;
-            }
-        }
+		for (int aRowItr = 0; aRowItr < n; aRowItr++) {
+			String[] aRowItems = scan.nextLine().split(" ");
 
-        int result = diagonalDifference(a);
+			for (int aColumnItr = 0; aColumnItr < n; aColumnItr++) {
+				int aItem = Integer.parseInt(aRowItems[aColumnItr].trim());
+				a[aRowItr][aColumnItr] = aItem;
+			}
+		}
 
-        bw.write(String.valueOf(result));
-        bw.newLine();
+		int result = diagonalDifference(a);
 
-        bw.close();
-    }
+		bw.write(String.valueOf(result));
+		bw.newLine();
+
+		bw.close();
+	}
 }

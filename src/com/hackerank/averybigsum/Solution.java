@@ -7,43 +7,43 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Solution {
-	  /*
-     * Complete the aVeryBigSum function below.
-     */
-    static long aVeryBigSum(int n, long[] ar) {
-        /*
-         * Write your code here.
-         */
+	/*
+	 * Complete the aVeryBigSum function below.
+	 */
+	static long aVeryBigSum(int n, long[] ar) {
+		/*
+		 * Write your code here.
+		 */
 
-    	BigInteger big = BigInteger.ZERO;
-    	for (int i = 0; i< n; i++) {
-    		big = big.add(BigInteger.valueOf(ar[i]));
-    	}
-    	
-    	return big.longValueExact();
-    }
+		BigInteger big = BigInteger.ZERO;
+		for (int i = 0; i < n; i++) {
+			big = big.add(BigInteger.valueOf(ar[i]));
+		}
 
-    private static final Scanner scan = new Scanner(System.in);
+		return big.longValueExact();
+	}
 
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+	private static final Scanner scan = new Scanner(System.in);
 
-        int n = Integer.parseInt(scan.nextLine().trim());
+	public static void main(String[] args) throws IOException {
+		BufferedWriter bw = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        long[] ar = new long[n];
+		int n = Integer.parseInt(scan.nextLine().trim());
 
-        String[] arItems = scan.nextLine().split(" ");
+		long[] ar = new long[n];
 
-        for (int arItr = 0; arItr < n; arItr++) {
-            long arItem = Long.parseLong(arItems[arItr].trim());
-            ar[arItr] = arItem;
-        }
+		String[] arItems = scan.nextLine().split(" ");
 
-        long result = aVeryBigSum(n, ar);
+		for (int arItr = 0; arItr < n; arItr++) {
+			long arItem = Long.parseLong(arItems[arItr].trim());
+			ar[arItr] = arItem;
+		}
 
-        bw.write(String.valueOf(result));
-        bw.newLine();
+		long result = aVeryBigSum(n, ar);
 
-        bw.close();
-    }
+		bw.write(String.valueOf(result));
+		bw.newLine();
+
+		bw.close();
+	}
 }
