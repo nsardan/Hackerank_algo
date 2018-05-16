@@ -1,4 +1,4 @@
-package com.hackerank.averybigsum;
+package com.hackerank.warmup.averybigsum;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

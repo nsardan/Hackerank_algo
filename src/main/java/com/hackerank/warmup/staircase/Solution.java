@@ -1,4 +1,4 @@
-package com.hackerank.staircase;
+package com.hackerank.warmup.staircase;
 
 import java.util.Scanner;
 

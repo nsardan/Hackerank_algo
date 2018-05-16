@@ -1,4 +1,4 @@
-package com.hackerank.simplearraysum;
+package com.hackerank.warmup.simplearraysum;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

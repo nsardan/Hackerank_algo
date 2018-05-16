@@ -1,4 +1,4 @@
-package com.hackerank.diagonaldifference;
+package com.hackerank.warmup.diagonaldifference;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

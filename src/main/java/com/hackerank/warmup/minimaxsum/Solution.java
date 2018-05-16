@@ -1,4 +1,4 @@
-package com.hackerank.minimaxsum;
+package com.hackerank.warmup.minimaxsum;
 
 import java.util.Scanner;
 import java.util.*;

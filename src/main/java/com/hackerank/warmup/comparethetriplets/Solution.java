@@ -1,4 +1,4 @@
-package com.hackerank.comparethetriplets;
+package com.hackerank.warmup.comparethetriplets;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

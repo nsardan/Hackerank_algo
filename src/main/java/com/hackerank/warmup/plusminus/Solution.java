@@ -1,4 +1,4 @@
-package com.hackerank.plusminus;
+package com.hackerank.warmup.plusminus;
 
 import java.math.BigDecimal;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.hackerank.timeconversion;
+package com.hackerank.warmup.timeconversion;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
