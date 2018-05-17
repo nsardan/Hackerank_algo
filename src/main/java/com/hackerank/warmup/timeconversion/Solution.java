@@ -1,7 +1,5 @@
 package com.hackerank.warmup.timeconversion;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
